@@ -6,11 +6,13 @@ def main():
     # problem3()
     # problem4()
     problem2again()
+
 # Create a random number. Print the number.
 #
 # Hint:
 # import random
 # randomNumber = random.randint(0,9)
+
 # easy enough
 
 
@@ -19,11 +21,14 @@ def problem1():
 
 # Create a function that has a loop that quits with ‘q’.
 # If the user doesn't enter 'q', ask them to input another string.
+
 # if else can be used for different sequences.
 # is there a way to use a for loop? x in a range of 0,2
 # if user enters incorrectly x-=1?
+# you are not actually changing the registered range, how could you change the range,
 
 def problem2():
+
     while(True):
         userInput = input("can you find the exit?!?!")
         if(userInput == "q"):
@@ -33,16 +38,24 @@ def problem2():
             print("YOU'LL BE TRAPPED HERE FOREVER!!!")
 
 
-# IGNORE THIS IS WORK IN PROGRESS
+# IGNORE, THIS IS WORK IN PROGRESS
+# you need to build a generator to supply the for loop
+# def generator():
+#     while True:
+#         yield 1
+#
+# for n in generator():
+#     print(n)
 
 def problem2again():
-    for x in range(0,2):
+    endnumber = 2
+    for x in range(0,endnumber):
         userInput = int(input("guess the escape number!!"))
         if(userInput == 0):
             print("you found it!")
             break
         else:
-            x-=1
+            endnumber+=1
 
 
 # Create a function that will loop until the user enters '0'.
@@ -51,7 +64,7 @@ def problem2again():
 
 # can i have some loops brother
 # ignore my stupid meme comments
-# switch case would be nice but pthon doesn't have that
+# switch case would be nice but python doesn't have that
 
 
 def problem3():
@@ -71,8 +84,9 @@ def problem3():
 # If they don't get it right, tell them if their next guess has to be higher or lower.
 
 # i reused the code from in class practice
-#this being an example of being able to build a function for something rather than having to type it out every time
-# this is a lazy approach for the graded class work which i will not deny and if i lose the point for this please let me know.
+# this being an example of being able to build a function for something rather than having to type it out every time
+# this is a lazy approach for the graded class work which i will not deny,
+# and if i lose the point for this please let me know.
 
 
 
@@ -82,7 +96,7 @@ def problem4():
 
     while(True):
         userInput = int(input("guess a number between 1 and 50"))
-        tries+=1
+        # tries+=1
         if(tries==3):
             print("sorry you lose")
             break
